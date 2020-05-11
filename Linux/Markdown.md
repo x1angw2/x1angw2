@@ -68,7 +68,9 @@ _注意:_标记后面最好有一个空格或者制表符，若不在引用区�
 ### 图片
 图片和链接类似 在链接前加!
 ```![tupian](http://tupian.com)```
+<div align="center">
 ![图片](../image/Avatar.jpg)
+</div>
 ### 反斜杠
 > \:转义符
 ### 标记
