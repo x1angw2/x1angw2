@@ -136,4 +136,73 @@ while n < 10:
 	n = n + 1
 	print(n)
 ```
+### dict
+> `dict`全称dictionary,在其它语言也称为map，使用键-值(key-value存储，具有极快的查找速度。
+```
+>>> d = {'xiaoming':98,'xiaozhang':100,'xiaowang':13}
+>>> d['xiaowang']
+13
+```
+```
+>>> d['jack'] = 123
+>>> d['jack']
+123
+```
+> 判断key是否存在，两种方法
+>> `in`
+```
+>>> 'keke' in d
+False
+```
+>> 'get()'如果不存在，返回'None',或者自己指定的value:
+```
+>>> d.get('keke')
+>>> d.get('keke',-7)
+-7
+```
+> 要删除key，同样可以用'pop(key)'的方法，对应的value也会从dict中删除
+```
+>>> d.pop('jack']
+123
+```
+> _dict的key必须是不可变对象_
+> 因为dict根据key来计算value的存储位置，如果每次计算相同的key得出的结果不同，那dict内部就完全混乱了，这个通过key计算位置的算法称为哈希算法(Hash)。要保证hash的正确性，作为key的对象就不能变。在Python中，字符串、整数等都是不可变的，因为，可以放心地作为key。而list是可变的，就不能作为key。
+```
+>>> key = [1, 2, 3]
+>>> d[key] = 'a list'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+```
+### set
+> `set`和`dict`类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。
+```
+# 创建一个set，需要提供一个list作为输入集合
+>>> s = set([1,2,3])
+>>> s
+{1,2,3}
+```
+```
+# 重复元素在set中自动被过滤
+>>> s = set([1,1,2,3,2])
+>>> s
+{1,2,3}
+```
+> 可以通过`add(key)添加元素到set中，可以重复添加，但是不会有效果。
+> 通过`remove(key)来删除元素
+```
+>>> s.remove(1）
+>>> s
+{2,3}
+```
+> `set`可以看成数学意义上的无序和无重复元素的集合，因此，两个set可以做数学意义上的交集、并集
+```
+>>> s1 = set([1,2,3])
+>>> s2 = set([2,3,4])
+>>> s1 & s2
+{2,3}
+>>> s1 | s2
+{1,2,3,4}
+```
+
 
