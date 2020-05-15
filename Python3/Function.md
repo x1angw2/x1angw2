@@ -17,4 +17,4 @@ s3 = 3.14 * r3 * r3
 $$\Sum_{n=1}^1{00}n$$
 # githu不支持LaTeX
 ```
-[sum](!/image/code_math_1.gif)
+![sum](/image/code_math_1.gif)
