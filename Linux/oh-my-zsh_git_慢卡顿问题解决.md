@@ -4,7 +4,7 @@
 
 > 原因是因为`oh-my-zsh`要获取`git`更新信息
 
-_解决办法_
+*解决办法*
 
 > 设置`oh-my-zsh`不读取文件变化信息(在git项目目录执行下列命令)
 
@@ -16,4 +16,4 @@ $ git config -add oh-my-zsh.hide-status 1
 ```
 > 如果想恢复，设置成0就好。
 
-[原地址](jianshu.com/p/bc4b8131db05) 
+[原地址](http://jianshu.com/p/bc4b8131db05) 
