@@ -250,6 +250,7 @@ def add_end(L=[]):
 ```
 >>> add_end()
 ['END']
+```
 但是，再次调用`add_end()`时，结果就不对了：
 ```
 >>> add_end()
