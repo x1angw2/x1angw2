@@ -462,13 +462,13 @@ a = 1 b = 2 c = 3 d = 88 kw = {'x': '#'}
 #### 递归函数
 在函数内部，可以调用其它函数。如果一个函数在内部调用自身本身，这个函数就是递归函数。
 举个例子，我们来计算阶乘`n! = 1 * 2 * 3 * ... * n`，用函数`fact(n)`表示，可以看出。
-![fact_b](../image/fact_n.png)
+![fact_b](../image/Math_LaTeX/fact_n.png)
 
 #### 小练习
 请定一个函数`quadratic(a,b,c)`,接收3个参数，返回一元二次方程`ax^2 + bx + c =0`的两个解。
 提示：
 一元二次方程的求根公式为：
-![一元二次方程求根公式](/image/ErYuanYiCiFangChen.gif)
+![一元二次方程求根公式](/image/Math_LaTeX/ErYuanYiCiFangChen.gif)
 计算平方根可以调用`math.sqrt()函数：
 ```
 >>> import math
