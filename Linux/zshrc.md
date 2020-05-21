@@ -32,3 +32,4 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 > github:https://github.com/KorvinSilver/blokkzh
 ![image](/image/blokkzh.png)
 - ys
+> ![I_LOVE_YS](/image/zsh_theme_ys.png)
