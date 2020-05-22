@@ -10,3 +10,11 @@
 | 1 | 2 | 3 |
 | :-: | :-: | :-: |
 | chongqing | china | world | 
+
+
+
+
+
+| and | as | assert | break | class | continue | 
+| :--: | :--: | :--: | :--: | :--: | :--: | 
+| for | from | if | import | in | is | 
