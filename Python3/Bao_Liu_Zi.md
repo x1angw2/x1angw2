@@ -1,4 +1,5 @@
 # 保留字
+
 | and | as | assert | break | class | continue | def | elif | else | except | finally |
 
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
