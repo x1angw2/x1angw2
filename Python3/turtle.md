@@ -28,7 +28,7 @@ turtle.setup(width,height,startx,starty)
 #### 空间坐标体系
 坐标分为**绝对坐标**和**相对坐标**
 **绝对坐标：**以画布空间坐标为准
-[^-^]![juedui](/image/python/turtle_ZuoBiao_JueDui.png)
+[^-^]:![juedui](/image/python/turtle_ZuoBiao_JueDui.png)
 <img src="/image/python/turtle_ZuoBiao_JueDui.png" width = "30%" />
 >> 初始位置为画面最中心
 
@@ -37,7 +37,7 @@ turtle.setup(width,height,startx,starty)
 >> `x,y`为坐标系的x轴和y轴
 
 **相对坐标：**以海龟为中心，分为海龟的前后左右。
-[^-^]![xiangdui](/image/python/turtle_ZuoBiao_XiangDui.png)
+[^-^]:![xiangdui](/image/python/turtle_ZuoBiao_XiangDui.png)
 
 <img src="/image/python/turtle_ZuoBiao_XiangDui.png" width = "30%"/>
 
@@ -55,5 +55,12 @@ turtle.setup(width,height,startx,starty)
 > `turtle.left(angle)向左
 
 > `turtle.right(angle)向右
+
+#### RGB色彩
+默认采用小数值，可切换为整数值
+**turtle.colormode(mode)**
+> 1.0:RGB小数值模式
+
+>255:RGB为整数值模式
 
 
