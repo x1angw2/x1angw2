@@ -44,8 +44,8 @@ turtle.setup(width,height,startx,starty)
 
 > `turtle.circle(r,angle)`以海龟的左侧的某一个点为圆心进行曲线运行
 #### 角度坐标体系
-[^-^]
-![jiaodu](/image/python/turtle_ZuoBiao_JiaoDu.png)(`>>`)
+[^-^]:
+![jiaodu](/image/python/turtle_ZuoBiao_JiaoDu.png)(`>>`).
 <img src="/image/python/turtle_ZuoBiao_JiaoDu.png" width = "30%"/>
 > `turtle.seth(angle)`改变海龟的前进方向，只改变方向，不留足迹。`angle`绝对度数
 
