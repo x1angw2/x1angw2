@@ -28,7 +28,8 @@ turtle.setup(width,height,startx,starty)
 #### 空间坐标体系
 坐标分为**绝对坐标**和**相对坐标**
 **绝对坐标：**以画布空间坐标为准
-[^-^]:![juedui](/image/python/turtle_ZuoBiao_JueDui.png)
+[^-^]:
+![juedui](/image/python/turtle_ZuoBiao_JueDui.png)(`>>`).
 <img src="/image/python/turtle_ZuoBiao_JueDui.png" width = "30%" />
 >> 初始位置为画面最中心
 
@@ -37,7 +38,8 @@ turtle.setup(width,height,startx,starty)
 >> `x,y`为坐标系的x轴和y轴
 
 **相对坐标：**以海龟为中心，分为海龟的前后左右。
-[^-^]:![xiangdui](/image/python/turtle_ZuoBiao_XiangDui.png)
+[^-^]:
+![xiangdui](/image/python/turtle_ZuoBiao_XiangDui.png)(`>>`).
 
 <img src="/image/python/turtle_ZuoBiao_XiangDui.png" width = "30%"/>
 
@@ -63,4 +65,20 @@ turtle.setup(width,height,startx,starty)
 
 >255:RGB为整数值模式
 
+turtle.penup()		画笔抬起
+turtle.pendown()	画笔落下
+
+turtle.pensize(width)	画笔宽度
+turtle.pencolor(color)	画笔颜色
+> 颜色字符串:turtle.pencolor("purple")_参数为字符串，带“”_
+
+> RGB的小数值:turtle.pencolor(0.63,0.13,0.94)
+
+> RGB的元组值:turtle.pencolor((0.63,0.13.0.94))
+
+turtle.forward()		海龟走直线
+> turtle.fd()
+
+turtle.circle(r,extent=None)	根据半径r绘制extent角度的弧形
+> 圆心在海龟左侧r像素的位置,默认角度360度
 
