@@ -24,3 +24,17 @@
 | S^T | 返回一个新集合，包括集合S和T中的非相同元素 | 
 | S <= T 或 S < T | 返回True/False，判断S和T的子集关系 |
 | S >= T 或 S > T | 返回True/False,判断S和T的包含关系  |
+#### 集合处理方法
+| 操作函数或方法 | 描述 |
+| :-: | :-: |
+| S.add(x) | 如果x不在集合S中，将x增加到S |
+| S.discard(x) | 移除S中元素x，如果x不在集合S中，不报错 |
+| S.remove(x) | 移除S中元素x，如果x不在集合S中，产生KeyError异常 |
+| S.clear() | 移除S中所有元素 |
+| S.pop() | 随机返回S的一个元素，更新S，若S为空产生KeyError异常 |
+| s.copy() | 返回集合S的一个副本 |
+| len(S) | 返回集合S的元素个数 ｜
+| x in S | 判断S中元素x，x在集合S中，返回True，否则返回False |
+| x not in S | 判断S中元素x，x不在集合S中，返回True，否则返回False |
+| set(x) | 将其它类型变量x转变为集合类型 |
+
