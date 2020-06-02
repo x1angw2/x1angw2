@@ -32,6 +32,7 @@
 | reuqests.TooManyRedirects | 超过最大重定向次数，产生重定向异常 |
 | reuqests.ConnectTimeout | 连接远程服务器超时异常 |
 | reuqests.Timeout | 请求URL超时，产生超时异常 |
+| r.raise\_for\_status() | 如果不是200，产生异常requests.HTTPError |
 
 #### requests.get
 requests.get(url,params=None,\*\*kwargs)
