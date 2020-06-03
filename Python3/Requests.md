@@ -49,6 +49,7 @@ requests.get(url,params=None,\*\*kwargs)
 > r = requests.request('PATCH',url,\*\*kwargs)
 > r = requests.request('delete',url,\*\*kwargs)
 > r = requests.request('OPTIONS',url,\*\*kwargs)
+
 **url:**拟获取页面的url链接
 **\*\*kwargs:**控制访问的参数，共13个(可选项)
 > **params:**字典或字节序列，作为参数增加到url中
@@ -96,3 +97,14 @@ r = requests.request('GET',http://www.baidu.com',timeout=10)
 > **verify:**True/False,默认为True，认证SSL证书开关
 > **cert:**本地SSL证书路径
 
+### 爬取网页的通用代码框架
+```python
+try:
+        r = requests.get(url,timeout=30)
+        r.raise_for_status()
+        r.encoding = r.apparent_encoding
+        return r.text
+except:
+        return "产生异常"
+```        
+> **网络连接有风险，异常处理很重要。**
