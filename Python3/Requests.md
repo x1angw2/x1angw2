@@ -40,3 +40,59 @@ requests.get(url,params=None,\*\*kwargs)
 - patams:url中的额外参数，字典或字节流格式，可选
 - \*\*kwargs:12个控制访问的参数
 
+#### requests.request(method,url,\*\*kwargs)
+**method:**请求方式，对应get/put/post等7种
+> r = requests.request('GET',url,\*\*kwargs)
+> r = requests.request('HEAD',url,\*\*kwargs)
+> r = requests.request('POST',url,\*\*kwargs)
+> r = requests.request('PUT',url,\*\*kwargs)
+> r = requests.request('PATCH',url,\*\*kwargs)
+> r = requests.request('delete',url,\*\*kwargs)
+> r = requests.request('OPTIONS',url,\*\*kwargs)
+**url:**拟获取页面的url链接
+**\*\*kwargs:**控制访问的参数，共13个(可选项)
+> **params:**字典或字节序列，作为参数增加到url中
+```
+>>> kv = {'key1':'value1','key2':'value2'}
+>>> r = requests.request('GET','http://python123.io.ws',params=kv)
+>>> print(r.url)
+http://python123.io/ws?key1=value1&key2=value2
+```
+> **data:**字典、字节序列或文件对象，作为Request的内容
+```
+>>> kv = {'key1':'value1','key2':'value2'}
+>>> r = requests.request('POST','http://python123.io.ws',data=kv)
+>>> body = '主体内容' 
+>>> r = requests.request('POST','http://python123.io/ws',data=body)
+```
+> **json:**JSON格式的数据，作为Request的内容
+```
+>>> kv = {'key1':'value1'}
+>>> r = requests.request('POST','http://python123.io/ws',json=kv)
+```
+> **headers:**字典，HTTP定制头
+```
+>>> hd = {'user-agent':Chrome/10'}
+>>> r = requests.request('POST','http://python123.io/ws',headers=hd)
+```
+> **cookies:**字典或CookieJar,Request中的cookie
+> **ayth:**元组，支持HTTP认证功能
+> **files:**字典类型，传输文件
+```
+>>> fs = {'file':open('data.xls','rb')}
+>>> r = requests.request('POST','http://python123.io/ws',files=fs)
+```
+> **timeout:**设定超时时间，秒为单位
+```
+r = requests.request('GET',http://www.baidu.com',timeout=10)
+```
+> **proxies:**字典类型，设定访问代理服务器，可以增加登陆认证
+```
+>>> pxs = {'http':'http://user:pass@118.24.119.135:10086''https':'https://118.24.119.135'}
+>>> r = requests.request('GET','http://www.baidu.com',proxies=psx)
+```
+> **aloow\_redirects:**True/False,默认为True，重定向开关
+> **stream:**True/False,默认为True,获取内容立即下载开关
+> **verify:**True/False,默认为True，认证SSL证书开关
+> **cert:**本地SSL证书路径
+
