@@ -41,7 +41,7 @@ requests.get(url,params=None,\*\*kwargs)
 - \*\*kwargs:12个控制访问的参数
 
 #### requests.request(method,url,\*\*kwargs)
-__method:__请求方式，对应get/put/post等7种
+**method:** 请求方式，对应get/put/post等7种
 1. r = requests.request('GET',url,\*\*kwargs)
 2. r = requests.request('HEAD',url,\*\*kwargs)
 3. r = requests.request('POST',url,\*\*kwargs)
@@ -50,7 +50,8 @@ __method:__请求方式，对应get/put/post等7种
 6. r = requests.request('delete',url,\*\*kwargs)
 7. r = requests.request('OPTIONS',url,\*\*kwargs)
 
-**url:**拟获取页面的url链接
+**url:**
+拟获取页面的url链接
 **\*\*kwargs:**控制访问的参数，共13个(可选项)
 > **params:**字典或字节序列，作为参数增加到url中
 ```
