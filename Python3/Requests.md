@@ -43,13 +43,13 @@ requests.get(url,params=None,\*\*kwargs)
 #### requests.request(method,url,\*\*kwargs)
 
 **method:** 请求方式，对应get/put/post等7种
-. r = requests.request('GET',url,\*\*kwargs)
-. r = requests.request('HEAD',url,\*\*kwargs)
-. r = requests.request('POST',url,\*\*kwargs)
-. r = requests.request('PUT',url,\*\*kwargs)
-. r = requests.request('PATCH',url,\*\*kwargs)
-. r = requests.request('delete',url,\*\*kwargs)
-. r = requests.request('OPTIONS',url,\*\*kwargs)
+ . r = requests.request('GET',url,\*\*kwargs)
+ . r = requests.request('HEAD',url,\*\*kwargs)
+ . r = requests.request('POST',url,\*\*kwargs)
+ . r = requests.request('PUT',url,\*\*kwargs)
+ . r = requests.request('PATCH',url,\*\*kwargs)
+ . r = requests.request('delete',url,\*\*kwargs)
+ . r = requests.request('OPTIONS',url,\*\*kwargs)
 
 **url:** 拟获取页面的url链接
 **\*\*kwargs:** 控制访问的参数，共13个(可选项)
