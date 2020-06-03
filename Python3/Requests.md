@@ -10,7 +10,7 @@
 | requests.put() | 向HTML网页提交PUT请求的方法，对应于HTTP的PUT |
 | requests.patch() | 向HTML网页提交局部修改请求，对应于HTTP的PATCH |
 | requests.delete() | 向HTML网页提交删除请求，对应于HTTP的DELETE |
-
+---
 #### Response对象的属性
 | 属性 | 说明 |
 | :- | :- |
@@ -22,7 +22,7 @@
 
 - `r.encoding`:如果header中不存在charset，则认为编码为ISO-8859-1
 - `r.apparent\_encoding`:根据网页内容分析出的编码方式
-
+---
 #### Requests库的异常
 | 异常 | 说明 |
 | :- | :- |
@@ -33,7 +33,7 @@
 | reuqests.ConnectTimeout | 连接远程服务器超时异常 |
 | reuqests.Timeout | 请求URL超时，产生超时异常 |
 | r.raise\_for\_status() | 如果不是200，产生异常requests.HTTPError |
-
+---
 #### requests.get
 requests.get(url,params=None,\*\*kwargs)
 - url:拟获取页面的url链接
@@ -43,11 +43,17 @@ requests.get(url,params=None,\*\*kwargs)
 #### requests.request(method,url,\*\*kwargs)
 **method:**请求方式，对应get/put/post等7种
 > r = requests.request('GET',url,\*\*kwargs)
+
 > r = requests.request('HEAD',url,\*\*kwargs)
+
 > r = requests.request('POST',url,\*\*kwargs)
+
 > r = requests.request('PUT',url,\*\*kwargs)
+
 > r = requests.request('PATCH',url,\*\*kwargs)
+
 > r = requests.request('delete',url,\*\*kwargs)
+
 > r = requests.request('OPTIONS',url,\*\*kwargs)
 
 **url:**拟获取页面的url链接
