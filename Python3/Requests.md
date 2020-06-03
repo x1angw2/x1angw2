@@ -41,7 +41,7 @@ requests.get(url,params=None,\*\*kwargs)
 - \*\*kwargs:12个控制访问的参数
 
 #### requests.request(method,url,\*\*kwargs)
-**method:**请求方式，对应get/put/post等7种
+__method:__ 请求方式，对应get/put/post等7种
 > r = requests.request('GET',url,\*\*kwargs)
 
 > r = requests.request('HEAD',url,\*\*kwargs)
