@@ -1,0 +1,37 @@
+"vim_plug插件管理器
+"地址:https://github.com/junegunn/vim-plug
+"Install:curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin('~/.vim/plugged')
+
+
+
+
+call plug#end()
+
+
+
+
+
+"语法高亮
+syntax on
+
+"显示行号和相对行号
+set number relativenumber
+
+"突出显示当前行
+set cursorline
+
+"显示状态栏
+set laststatus=2
+
+"在命令行显示当前模式
+set showmode
+
+"根据文件类型加载插件
+filetype plugin indent on
+
+"根据上一行自动缩进
+set autoindent
+
+"空格替换制表符
+set expandtab
