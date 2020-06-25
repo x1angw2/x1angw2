@@ -1,4 +1,3 @@
 # WEZHON
 
-This My blog! 
-**china**
+This My github.
