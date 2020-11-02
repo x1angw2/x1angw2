@@ -1,0 +1,214 @@
+"-----------------------------------
+"    动作 数字 方向 
+"
+"
+"-----------------------------------
+"	可视模式 
+" 1. 按 v 进入普通可视模式 
+" 2. 按 shift + v 行选择可视模式 
+" 3. 按 Control + v 可视块模式 
+"
+"  可视模式下 :normal I <文本> 
+"	I : 到行插入文本 
+"	效果：选中行，每行都操作 
+"------------------------------------
+"		分屏 
+"
+" :split 竖分 
+" :vsplit 横分 
+"
+" set splitright  分屏后光标默认在右 
+"------------------------------------
+"		标签 
+"
+" :tabe 新建标签 
+" :-tabnext 左移 
+" :+tabnext 右移 
+"
+"
+
+
+
+
+
+"------------
+"  键映射 
+"------------
+
+map S :w<CR>
+map Q :q<CR>
+map R :source ~/.vimrc<CR>
+
+
+
+
+"------------
+"  常用设置 
+"------------
+
+syntax on
+"语法高亮 
+
+set number
+"显示行号 
+
+set relativenumber
+"显示相对行号 
+
+set cursorline
+"当前行显示下划线 
+
+set wrap
+"自动换行 
+
+set showcmd
+"下面显示命令 
+
+set wildmenu 
+"命令补全 Tab键 
+
+set hlsearch
+"搜索高亮 
+
+set incsearch
+"输入高亮 
+
+set ignorecase
+"忽略大小写 
+
+
+"---------------------
+"    插件管理 Plug 
+"---------------------
+call plug#begin('~/.vim/plugged')
+
+	Plug 'vim-airline/vim-airline'
+	"状态栏插件 
+  Plug 'vim-airline/vim-airline-themes'
+  "下边栏美化
+	
+	Plug 'connorholyday/vim-snazzy'
+	"配色插件 
+	
+	Plug 'dhruvasagar/vim-table-mode'
+	"Markdown 表格格式化插件
+
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+	"Markdown实时预览
+  Plug 'iamcco/mathjax-support-for-mkdp'
+  "Markdownk 添加Latex支持
+
+	Plug 'preservim/nerdtree'
+	"文件目录树
+
+
+
+
+
+
+
+
+
+call plug#end()
+
+
+"vim-snazzy配色插件设置 
+color snazzy 
+"设置主题配色 
+let g:SnazzyTransparent = 1 
+"设置背景透明 
+
+
+
+
+"---------------------
+"  vim-table-mode   
+"---------------------
+function! s:isAtStartOfLine(mapping)
+  let text_before_cursor = getline('.')[0 : col('.')-1]
+  let mapping_pattern = '\V' . escape(a:mapping, '\')
+  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+endfunction
+
+inoreabbrev <expr> <bar><bar>
+          \ <SID>isAtStartOfLine('\|\|') ?
+          \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+inoreabbrev <expr> __
+          \ <SID>isAtStartOfLine('__') ?
+          \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+
+
+"---------------------
+"  vim-Nerdtree-map  
+"---------------------
+"map <C-n> :NERDTreeToggle<CR>
+map T :NERDTreeToggle<CR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+set nocompatible
+
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+
+set mouse=a
+"可以使用鼠标
+
+set encoding=utf-8
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+"缩进格数
+
+
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"光标回到上次打开文件的地方
+
+
+set scrolloff=5
+"永远显示下面5行
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"不同模式光标不同
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
